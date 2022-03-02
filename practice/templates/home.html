@@ -11,22 +11,44 @@
             
             
         }
+        .box{
+            border: 1px solid;
+            padding:1rem;
+           
+        }
+        #wrap{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap:2rem;
+            
+        }
     </style>
 </head>
 <body>
-    welcome!!
+    <div id="wrap">
+    <div class="box">
     {% for ct in cat %}
     <div><h1><li>{{ ct.name }}</a></li></h1>
     {% for n in news %}
 
     {% if n.category == ct %} 
-        <li class="inner">{{n.title}} </li>    
+        <li class="inner"> <a href='#' onclick="disp('{{ n.text|truncatewords:15}}');" >{{n.title}} </a></li>    
     {% endif %}
     
     {% endfor %}
         </div>
     {% endfor %}
     <br>
-   
+    </div>
+    <div class="box">
+        <p id="res"></p>
+    </div>
+
+   <script>
+       function disp(st){
+        let res = document.querySelector("#res")
+        res.innerHTML=st
+       }
+   </script>
 </body>
 </html>
