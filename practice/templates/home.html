@@ -16,11 +16,13 @@
             padding:1rem;
            
         }
+        #resb{
+            visibility: collapse;
+        }
         #wrap{
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap:2rem;
-            
         }
     </style>
 </head>
@@ -40,13 +42,17 @@
     {% endfor %}
     <br>
     </div>
-    <div class="box">
+    <div class="box" id="resb">
         <p id="res"></p>
     </div>
 
    <script>
        function disp(st){
+        
         let res = document.querySelector("#res")
+        let resb = document.querySelector("#resb")
+        resb.style.visibility="visible";
+
         res.innerHTML=st
        }
    </script>
