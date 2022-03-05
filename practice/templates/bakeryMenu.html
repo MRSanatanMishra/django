@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cakes:</h1>
+    {%for cake in cakes%}
+    <p>
+        Cake: {{cake.name}} <br>
+        Description: {{cake.description}}<br>
+        Price: {{cake.price}}<br>
+
+    {% endfor %}
+    </p><br><br>
+    <h1>Biscuits:</h1>
+
+    <p>
+    {%for biscuit in biscuits%}
+        Cake: {{biscuit.name}}<br>
+        Flavour: {{biscuit.flavour}}<br>
+        Price: {{biscuit.price}}<br><br>
+    {% endfor %}
+    </p>
+</body>
+</html>

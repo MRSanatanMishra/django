@@ -18,6 +18,7 @@
         }
         #resb{
             visibility: collapse;
+            height: fit-content;
         }
         #wrap{
             display: grid;
@@ -34,7 +35,7 @@
     {% for n in news %}
 
     {% if n.category == ct %} 
-        <li class="inner"> <a href='#' onclick="disp('{{ n.text|truncatewords:15}}');" >{{n.title}} </a></li>    
+        <li class="inner"> <a href='#' onclick="disp('{{ n.text|truncatewords:10}}');" >{{n.title}} </a></li>    
     {% endif %}
     
     {% endfor %}
@@ -42,10 +43,10 @@
     {% endfor %}
     <br>
     </div>
+
     <div class="box" id="resb">
         <p id="res"></p>
     </div>
-
    <script>
        function disp(st){
         
