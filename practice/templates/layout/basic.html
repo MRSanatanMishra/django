@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+
+    <style>
+        body{
+            background-color: cadetblue;
+        }
+        nav ul{
+            list-style: none;
+            justify-content: space-around;
+            display: flex;
+            border-radius: 20%;
+            background-color: aqua;
+        }
+        nav li a{
+            text-decoration: none;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 1200 ;
+        }
+        a:hover{
+            color:crimson
+        }
+
+
+    </style>
+    {% block css %}
+
+    {% endblock css %}
+    
+    
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/admin">Admin</a></li>
+            <li><a href="{% url 'pnewsHome' %}">PnewsApp</a></li>
+            <li><a href="{% url 'bakeryHome' %}">BakeryApp</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/about">About</a></li>
+
+        </ul>
+    </nav>
+    
+    {% block body %}
+        
+    {% endblock body %}
+        
+</body>
+</html>

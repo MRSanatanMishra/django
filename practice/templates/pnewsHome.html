@@ -1,10 +1,10 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
+{% extends 'layout/basic.html' %}
+
+
+{% block css %}
+    
+<style>
+
         div .inner{
 
             padding-left: 5rem;
@@ -25,9 +25,13 @@
             grid-template-columns: 1fr 1fr;
             gap:2rem;
         }
-    </style>
-</head>
-<body>
+
+</style>
+        {% endblock css %}
+    
+
+        {% block body %}
+        
     <div id="wrap">
     <div class="box">
     {% for ct in cat %}
@@ -57,5 +61,7 @@
         res.innerHTML=st
        }
    </script>
-</body>
-</html>
+
+{% endblock body %}
+                
+    
