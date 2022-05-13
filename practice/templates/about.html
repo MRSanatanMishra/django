@@ -2,12 +2,73 @@
 
 
 {% block css %}
-    
+    <style>
+        .container{
+            
+            background-color: bisque;
+        }
+        .container-fluid{
+            background-color: coral;
+        }
+        .col{
+            outline: 1px solid green;
+        }
+    </style>
 {% endblock css %}
     
 
 {% block body %}
     about
+
+<div class="container">
+    <div class="row">
+        <div class="col">Lorem, ipsum.</div>
+        <div class="col">Ex, quod?</div>
+        <div class="col">Similique, iure!</div>
+    </div>
+    <div class="row">
+        <div class="col">Lorem, ipsum.</div>
+        <div class="col">Unde, error.</div>
+        <div class="col">Facere, voluptas!</div>
+    </div>
+    <div class="row">
+        <div class="col">Lorem, ipsum.</div>
+        <div class="col">Autem, soluta.</div>
+        <div class="col">Explicabo, dignissimos?</div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">Lorem.</div>
+        <div class="col">Velit!</div>
+        <div class="col">Tempora.</div>
+    </div>
+    <div class="row">
+        <div class="col">Lorem.</div>
+        <div class="col">In.</div>
+        <div class="col">Sequi.</div>
+    </div>
+    <div class="row">
+        <div class="col">Lorem, ipsum dolor.</div>
+        <div class="col">Temporibus, ut deserunt!</div>
+        <div class="col">Atque, sunt voluptatibus?</div>
+    </div>
+    <div class="row">
+        <div class="col">Lorem, ipsum dolor.</div>
+        <div class="col">Aspernatur, nulla tenetur.</div>
+        <div class="col">Fuga, repudiandae magni.</div>
+    </div>
+    <div class="row">
+        <div class="col">Lorem, ipsum dolor.</div>
+        <div class="col">Delectus, illum pariatur.</div>
+        <div class="col">Dicta, voluptatem labore.</div>
+    </div>
+    <div class="row">
+        <div class="col">Lorem, ipsum dolor.</div>
+        <div class="col">Cupiditate, explicabo numquam.</div>
+        <div class="col">Porro, similique enim!</div>
+    </div>
+</div>
 {% endblock body %}
     
 

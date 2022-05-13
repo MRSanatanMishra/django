@@ -25,6 +25,9 @@
             grid-template-columns: 1fr 1fr;
             gap:2rem;
         }
+        .cat{
+            list-style: none;
+        }
 
 </style>
         {% endblock css %}
@@ -35,7 +38,7 @@
     <div id="wrap">
     <div class="box">
     {% for ct in cat %}
-    <div><h1><li>{{ ct.name }}</a></li></h1>
+    <div><h1><li class="cat">{{ ct.name }}</a></li></h1>
     {% for n in news %}
 
     {% if n.category == ct %} 
